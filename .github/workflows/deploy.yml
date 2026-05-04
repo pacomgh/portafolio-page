@@ -1,0 +1,40 @@
+name: Deploy Portfolio to GitHub Pages
+
+# Este evento dispara el action cada vez que haces un push a la rama 'main'
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch: # Te permite ejecutarlo manualmente si lo necesitas
+
+# Permisos necesarios para que el action pueda modificar tu GitHub Page
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Evita que múltiples despliegues se pisen entre sí
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+      
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+      
+      - name: Subir archivos (Artifacts)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Esto le dice que tome todos los archivos de la raíz (tus HTML, y la carpeta assets)
+      
+      - name: Desplegar a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
