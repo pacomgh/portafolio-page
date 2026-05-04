@@ -3,271 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Francisco Guzmán | Mobile Developer</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Francisco Guzmán | Proyectos</title>
     <style>
-        /* Variables de color - Tema Oscuro Moderno */
         :root {
-            --bg-color: #0a0f16;
-            --surface-color: #1a212d;
-            --primary-color: #00f2fe;
-            --text-main: #f0f6fc;
-            --text-muted: #8b949e;
-            --glass-bg: rgba(26, 33, 45, 0.7);
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --primary: #58a6ff;
+            --border: #30363d;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); padding: 4rem 10%; }
+        
+        header { margin-bottom: 4rem; text-align: center; }
+        header h1 { font-size: 3rem; color: #fff; margin-bottom: 1rem; }
+        header p { font-size: 1.2rem; color: #8b949e; }
+
+        /* Cuadrícula de Proyectos */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        header {
-            height: 100vh;
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, border-color 0.2s;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            background: radial-gradient(circle at top, #1a212d 0%, #0a0f16 100%);
-        }
-
-        header h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        header h2 {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            max-width: 600px;
-        }
-
-        /* Secciones de Proyectos */
-        .project-section {
-            min-height: 100vh;
-            padding: 5rem 10%;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .project-content {
-            display: flex;
-            gap: 4rem;
-            width: 100%;
-            align-items: center;
-        }
-
-        /* Invertir layout para proyectos pares */
-        .project-section:nth-child(even) .project-content {
-            flex-direction: row-reverse;
-        }
-
-        .project-info {
-            flex: 1;
-        }
-
-        .project-info h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-badge {
-            background: var(--surface-color);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: var(--primary-color);
-            border: 1px solid rgba(0, 242, 254, 0.2);
-        }
-
-        .project-details {
-            background: var(--glass-bg);
-            padding: 1.5rem;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .project-details ul {
-            list-style-position: inside;
-            color: var(--text-muted);
-            margin-top: 1rem;
-        }
-
-        /* Contenedor del Doble Flujo (Magia Visual) */
-        .project-visuals {
-            flex: 1;
-            display: flex;
             gap: 1rem;
-            justify-content: center;
         }
 
-        .device-mockup {
-            width: 250px;
-            height: 520px;
-            background: black;
-            border-radius: 30px;
-            border: 8px solid #2d3748;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
         }
 
-        .device-label {
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0,0,0,0.7);
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            backdrop-filter: blur(5px);
-            z-index: 10;
-        }
-
-        .device-mockup video, .device-mockup img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Responsivo para móviles */
-        @media (max-width: 968px) {
-            .project-content, .project-section:nth-child(even) .project-content {
-                flex-direction: column;
-            }
-            .project-visuals {
-                width: 100%;
-                flex-wrap: wrap;
-            }
-            header h1 { font-size: 2.5rem; }
-        }
+        .project-card h3 { color: #fff; font-size: 1.5rem; }
+        .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .tag { background: rgba(88, 166, 255, 0.1); color: var(--primary); padding: 0.2rem 0.8rem; border-radius: 15px; font-size: 0.8rem; border: 1px solid rgba(88, 166, 255, 0.2); }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
     <header>
-        <h1>Francisco Guzmán</h1>
-        <h2>Mobile Developer especializado en arquitecturas escalables, soluciones basadas en mapas y despliegues de extremo a extremo.</h2>
-        <div style="margin-top: 2rem;">
-            <a href="https://github.com/pacomgh" style="color: white; font-size: 1.5rem; margin: 0 10px;"><i class="fab fa-github"></i></a>
-            <a href="https://Linkedin.com/in/pacomgh" style="color: white; font-size: 1.5rem; margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
-        </div>
+        <h1>Portafolio de Proyectos</h1>
+        <p>Selecciona un proyecto para ver a detalle la arquitectura y flujos operativos.</p>
     </header>
 
-    <!-- PROYECTO 1: CARPOOL (Con Doble Flujo) -->
-    <section class="project-section">
-        <div class="project-content">
-            <div class="project-info">
-                <h3>Carpool App</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Clean Architecture</span>
-                    <span class="tech-badge">Sockets</span>
-                    <span class="tech-badge">Google Maps API</span>
-                </div>
-                <div class="project-details">
-                    <p><strong>Arquitectura & Optimización</strong><br>
-                    Plataforma de movilidad diseñada para sincronización en tiempo real. Debido a acuerdos de confidencialidad, el código fuente es privado, pero el flujo operativo se demuestra aquí.</p>
-                    <ul>
-                        <li>Reducción del 15% en problemas de rendimiento optimizando controladores.</li>
-                        <li>Implementación de sockets para sincronización instantánea entre Pasajero y Conductor.</li>
-                        <li>Gestión de rutas multi-destino con drag-and-drop.</li>
-                    </ul>
-                </div>
+    <div class="grid-container">
+        <!-- Tarjeta Carpool -->
+        <a href="carpool.html" class="project-card">
+            <h3>Carpool App</h3>
+            <p>Plataforma de movilidad con gestión de rutas y sincronización en tiempo real.</p>
+            <div class="tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Sockets</span>
+                <span class="tag">Google Maps</span>
             </div>
-            
-            <!-- EL DOBLE FLUJO DE VIDEOS -->
-            <div class="project-visuals">
-                <div class="device-mockup">
-                    <span class="device-label">Vista Pasajero</span>
-                    <!-- Reemplaza el src con la ruta de tu video local o url -->
-                    <video src="assets/passenger_flow.mp4" autoplay loop muted playsinline></video>
-                </div>
-                <div class="device-mockup" style="transform: translateY(30px);"> <!-- Ligero desfase visual para estilo -->
-                    <span class="device-label">Vista Conductor</span>
-                    <video src="assets/driver_flow.mp4" autoplay loop muted playsinline></video>
-                </div>
-            </div>
-        </div>
-    </section>
+        </a>
 
-    <!-- PROYECTO 2: MAPBOX KIT (Single Video/Demo) -->
-    <section class="project-section">
-        <div class="project-content">
-            <div class="project-info">
-                <h3>Mapbox Kit Navigation</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">Flutter</span>
-                    <span class="tech-badge">Dart</span>
-                    <span class="tech-badge">Mapbox</span>
-                    <span class="tech-badge">Pub.dev</span>
-                </div>
-                <div class="project-details">
-                    <p><strong>Librería Open Source</strong><br>
-                    Desarrollo de un paquete reutilizable para navegación en tiempo real con Mapbox, manejando el ciclo de vida de publicación en pub.dev.</p>
-                    <ul>
-                        <li>Gestión dinámica de waypoints (agregar/actualizar/remover).</li>
-                        <li>Navegación guiada por voz.</li>
-                        <li>Lógica de rastreo de segmentos completados.</li>
-                    </ul>
-                </div>
+        <!-- Tarjeta Yaab -->
+        <a href="yaab.html" class="project-card">
+            <h3>Yaab</h3>
+            <p>Actualización, seguridad y despliegue a producción de aplicación móvil.</p>
+            <div class="tags">
+                <span class="tag">iOS/Android Native</span>
+                <span class="tag">Firebase</span>
             </div>
-            <div class="project-visuals">
-                <div class="device-mockup">
-                    <span class="device-label">Navegación Activa</span>
-                    <video src="assets/mapbox_flow.mp4" autoplay loop muted playsinline></video>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROYECTO 3: YAAB / RELEASES -->
-    <section class="project-section">
-        <div class="project-content">
-            <div class="project-info">
-                <h3>Despliegue & App Store Management</h3>
-                <div class="tech-stack">
-                    <span class="tech-badge">iOS/Android Native</span>
-                    <span class="tech-badge">Firebase Auth</span>
-                    <span class="tech-badge">CI/CD</span>
-                </div>
-                <div class="project-details">
-                    <p><strong>End-to-End Lifecycle</strong><br>
-                    Liderazgo en el proceso completo de lanzamiento, desde configuración nativa hasta aprobación en tiendas.</p>
-                    <ul>
-                        <li>Actualizaciones de versiones de Flutter y Dart garantizando estabilidad.</li>
-                        <li>Manejo de flujos de autenticación seguros (Apple/Google Sign-In).</li>
-                        <li>Manejo integral de revisión y resolución de rechazos en App Store/Play Store.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        </a>
+        
+        <!-- Puedes agregar aquí las tarjetas de Nearby Map y Mapbox Kit -->
+    </div>
 
 </body>
 </html>
