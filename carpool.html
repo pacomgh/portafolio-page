@@ -4,65 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carpool App | Detalle</title>
-    <style>
-        :root {
-            --bg-color: #0a0e14;
-            --surface-color: #1a202c;
-            --primary-color: #00e676; /* Verde técnico */
-            --text-main: #f0f6fc;
-            --text-muted: #8b949e;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 3rem 10%; }
-        
-        a.back-btn { color: var(--text-muted); text-decoration: none; margin-bottom: 2rem; display: inline-block; font-size: 1.1rem; }
-        a.back-btn:hover { color: #fff; }
-
-        /* Encabezado del Proyecto */
-        .project-header { margin-bottom: 5rem; border-bottom: 1px solid #2d3748; padding-bottom: 2rem; }
-        .project-header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-        .tech-tags { display: flex; gap: 0.8rem; margin-bottom: 1.5rem; }
-        .tech-badge { background: #131d26; padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 0.9rem; color: var(--primary-color); border: 1px solid rgba(0, 230, 118, 0.3); }
-        .project-summary { background: var(--surface-color); padding: 1.5rem; border-radius: 12px; border: 1px solid #2d3748; color: #cbd5e0; max-width: 800px; }
-
-        /* Sección de Flujos */
-        .flow-section { margin-bottom: 6rem; }
-        .flow-title { font-size: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem; }
-        
-        .flow-container { display: flex; gap: 4rem; align-items: flex-start; }
-
-        /* Contenedor Izquierdo: Teléfonos */
-        .phones-wrapper { display: flex; gap: 1.5rem; flex: 1; justify-content: center; position: relative; }
-        
-        .device {
-            width: 240px; height: 500px;
-            background: #000; border-radius: 30px;
-            border: 6px solid #2d3748;
-            position: relative; overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        /* El desfase del segundo teléfono */
-        .device:nth-child(2) { transform: translateY(40px); }
-
-        .device-label {
-            position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%);
-            background: rgba(0,0,0,0.8); color: white; padding: 4px 12px;
-            border-radius: 10px; font-size: 0.75rem; z-index: 10; width: max-content;
-        }
-        .device video { width: 100%; height: 100%; object-fit: cover; }
-
-        /* Contenedor Derecho: Descripción */
-        .flow-description { flex: 1; background: var(--surface-color); padding: 2.5rem; border-radius: 15px; border: 1px solid #2d3748; margin-top: 2rem; }
-        .flow-description h3 { font-size: 1.5rem; color: #fff; margin-bottom: 1rem; }
-        .flow-description ul { list-style-position: inside; color: var(--text-muted); margin-top: 1rem; }
-        .flow-description li { margin-bottom: 0.5rem; }
-
-        /* Responsividad */
-        @media (max-width: 968px) {
-            .flow-container { flex-direction: column; align-items: center; }
-            .flow-description { width: 100%; margin-top: 4rem; }
-        }
-    </style>
+    <!-- Enlace a tu nueva hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -72,10 +15,10 @@
     <div class="project-header">
         <h1>Carpool App</h1>
         <div class="tech-tags">
-            <span class="tech-badge">Flutter</span>
-            <span class="tech-badge">Clean Architecture</span>
-            <span class="tech-badge">Sockets</span>
-            <span class="tech-badge">Google Maps API</span>
+            <span class="tech-badge-green">Flutter</span>
+            <span class="tech-badge-green">Clean Architecture</span>
+            <span class="tech-badge-green">Sockets</span>
+            <span class="tech-badge-green">Google Maps API</span>
         </div>
         <div class="project-summary">
             <p><strong>Arquitectura & Optimización</strong><br>
@@ -105,9 +48,9 @@
                 <h3>¿Qué está sucediendo aquí?</h3>
                 <p>En este flujo se demuestra la comunicación bidireccional gestionada mediante Sockets, manteniendo una latencia mínima entre la solicitud y la recepción.</p>
                 <ul>
-                    <li>El pasajero establece un punto de recogida arrastrable en el mapa[cite: 1].</li>
-                    <li>El servidor calcula la ruta óptima usando Google Maps APIs[cite: 1].</li>
-                    <li>El conductor recibe la alerta vía push notification integrada en tiempo real[cite: 1].</li>
+                    <li>El pasajero establece un punto de recogida arrastrable en el mapa.</li>
+                    <li>El servidor calcula la ruta óptima usando Google Maps APIs.</li>
+                    <li>El conductor recibe la alerta vía push notification integrada en tiempo real.</li>
                 </ul>
             </div>
         </div>
