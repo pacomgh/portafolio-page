@@ -1,0 +1,245 @@
+/* =========================================
+   VARIABLES GLOBALES (Paleta Unificada)
+   ========================================= */
+:root {
+    --bg-color: #0d1117;
+    --surface-color: #161b22;
+    --border-color: #30363d;
+    --text-main: #c9d1d9;
+    --text-muted: #8b949e;
+    --primary-blue: #58a6ff;
+    --primary-green: #00e676;
+}
+
+/* =========================================
+   ESTILOS GENERALES
+   ========================================= */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+}
+
+body { 
+    background-color: var(--bg-color); 
+    color: var(--text-main); 
+    line-height: 1.6; 
+    padding: 4rem 10%; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================
+   PANTALLA PRINCIPAL (index.html)
+   ========================================= */
+.home-header { 
+    margin-bottom: 4rem; 
+    text-align: center; 
+}
+
+.home-header h1 { 
+    font-size: 3rem; 
+    color: #fff; 
+    margin-bottom: 1rem; 
+}
+
+.home-header p { 
+    font-size: 1.2rem; 
+    color: var(--text-muted); 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-blue);
+}
+
+.project-card h3 { 
+    color: #fff; 
+    font-size: 1.5rem; 
+}
+
+.tags { 
+    display: flex; 
+    gap: 0.5rem; 
+    flex-wrap: wrap; 
+}
+
+/* Etiqueta Azul (Usada en el Grid) */
+.tag-blue { 
+    background: rgba(88, 166, 255, 0.1); 
+    color: var(--primary-blue); 
+    padding: 0.2rem 0.8rem; 
+    border-radius: 15px; 
+    font-size: 0.8rem; 
+    border: 1px solid rgba(88, 166, 255, 0.2); 
+}
+
+/* =========================================
+   PÁGINA DE DETALLE (carpool.html)
+   ========================================= */
+a.back-btn { 
+    color: var(--text-muted); 
+    margin-bottom: 2rem; 
+    display: inline-block; 
+    font-size: 1.1rem; 
+}
+
+a.back-btn:hover { 
+    color: #fff; 
+}
+
+.project-header { 
+    margin-bottom: 5rem; 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 2rem; 
+}
+
+.project-header h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 1rem; 
+    color: #fff;
+}
+
+.tech-tags { 
+    display: flex; 
+    gap: 0.8rem; 
+    margin-bottom: 1.5rem; 
+}
+
+/* Etiqueta Verde (Usada en el Header del Proyecto) */
+.tech-badge-green { 
+    background: #131d26; 
+    padding: 0.5rem 1.2rem; 
+    border-radius: 20px; 
+    font-size: 0.9rem; 
+    color: var(--primary-green); 
+    border: 1px solid rgba(0, 230, 118, 0.3); 
+}
+
+.project-summary { 
+    background: var(--surface-color); 
+    padding: 1.5rem; 
+    border-radius: 12px; 
+    border: 1px solid var(--border-color); 
+    color: #cbd5e0; 
+    max-width: 800px; 
+}
+
+.flow-section { 
+    margin-bottom: 6rem; 
+}
+
+.flow-title { 
+    font-size: 2rem; 
+    margin-bottom: 2rem; 
+    border-left: 4px solid var(--primary-green); 
+    padding-left: 1rem; 
+    color: #fff;
+}
+
+.flow-container { 
+    display: flex; 
+    gap: 4rem; 
+    align-items: flex-start; 
+}
+
+.phones-wrapper { 
+    display: flex; 
+    gap: 1.5rem; 
+    flex: 1; 
+    justify-content: center; 
+    position: relative; 
+}
+
+.device {
+    width: 240px; 
+    height: 500px;
+    background: #000; 
+    border-radius: 30px;
+    border: 6px solid var(--border-color);
+    position: relative; 
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.device:nth-child(2) { 
+    transform: translateY(40px); 
+}
+
+.device-label {
+    position: absolute; 
+    bottom: 15px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8); 
+    color: white; 
+    padding: 4px 12px;
+    border-radius: 10px; 
+    font-size: 0.75rem; 
+    z-index: 10; 
+    width: max-content;
+}
+
+.device video { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.flow-description { 
+    flex: 1; 
+    background: var(--surface-color); 
+    padding: 2.5rem; 
+    border-radius: 15px; 
+    border: 1px solid var(--border-color); 
+    margin-top: 2rem; 
+}
+
+.flow-description h3 { 
+    font-size: 1.5rem; 
+    color: #fff; 
+    margin-bottom: 1rem; 
+}
+
+.flow-description ul { 
+    list-style-position: inside; 
+    color: var(--text-muted); 
+    margin-top: 1rem; 
+}
+
+.flow-description li { 
+    margin-bottom: 0.5rem; 
+}
+
+/* Responsividad para Móviles */
+@media (max-width: 968px) {
+    .flow-container { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .flow-description { 
+        width: 100%; 
+        margin-top: 4rem; 
+    }
+}
