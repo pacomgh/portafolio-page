@@ -431,3 +431,20 @@ a.back-btn:hover {
         justify-content: center;
     }
 }
+
+/* Tarjeta Premium TecNM / Gobierno de México */
+.cert-card.premium-tecnm::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    /* Color guinda institucional exacto */
+    background: #58151c; 
+}
+
+/* Ajuste sutil para las etiquetas internas de esta tarjeta */
+.cert-card.premium-tecnm .sub-cert-tag {
+    border-color: rgba(88, 21, 28, 0.4); /* Borde sutil guinda */
+}
