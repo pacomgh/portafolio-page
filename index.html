@@ -116,25 +116,45 @@
     <!-- =========================================
          SECCIÓN: CERTIFICACIONES
          ========================================= -->
+    <!-- =========================================
+         SECCIÓN: CERTIFICACIONES
+         ========================================= -->
     <h2 class="section-title">Certificaciones Profesionales</h2>
     
     <div class="cert-grid">
-        <!-- Certificación Azure (Ejemplo de tu CV) -->
-        <div class="cert-card">
-            <i class="fas fa-certificate cert-icon"></i>
-            <h3>Microsoft Azure Fundamentals (AZ-900)</h3>
-            <p style="color: var(--text-muted); font-size: 0.85rem;">Microsoft</p>
-            <!-- Puedes reemplazar el # por el link de credly o tu PDF -->
-            <a href="#" class="btn-cert" target="_blank">Ver Credencial</a>
+        
+        <!-- CERTIFICADO PREMIUM: Google AI -->
+        <div class="cert-card premium">
+            <i class="fab fa-google cert-icon" style="font-size: 4rem; color: #fff;"></i>
+            
+            <div class="premium-content">
+                <h3>Google AI Professional Certificate</h3>
+                <p>Programa de especialización oficial de Google enfocado en Inteligencia Artificial Generativa y Modelos de Lenguaje.</p>
+                
+                <!-- Aquí listamos los módulos o "badges" internos -->
+                <div class="sub-certs-tags">
+                    <span class="sub-cert-tag"><i class="fas fa-check-circle" style="color: #34A853;"></i> Prompt Engineering</span>
+                    <span class="sub-cert-tag"><i class="fas fa-check-circle" style="color: #34A853;"></i> Large Language Models (LLMs)</span>
+                    <span class="sub-cert-tag"><i class="fas fa-check-circle" style="color: #34A853;"></i> Generative AI Fundamentals</span>
+                </div>
+
+                <!-- EL ENLACE: Aquí pones la URL de Coursera o la ruta local de tu PDF -->
+                <!-- Ejemplo con PDF local: href="assets/certs/google_ai_certificate.pdf" -->
+                <!-- Ejemplo con URL de Coursera: href="https://coursera.org/verify/professional-cert/TU_ID" -->
+                <a href="URL_DE_TU_CERTIFICADO_O_PDF" class="btn-cert" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i> Ver Certificado Oficial
+                </a>
+            </div>
         </div>
 
-        <!-- Ejemplo de placeholder para otra certificación (ej. Flutter, Google, etc.) -->
+        <!-- Tarjeta normal para otras certificaciones (Ej: Azure) -->
         <div class="cert-card">
-            <i class="fas fa-certificate cert-icon" style="color: silver;"></i>
-            <h3>Flutter Advanced Architecture</h3>
-            <p style="color: var(--text-muted); font-size: 0.85rem;">Plataforma/Institución</p>
-            <a href="#" class="btn-cert" target="_blank">Ver Credencial</a>
+            <i class="fab fa-microsoft cert-icon" style="color: #00a4ef;"></i>
+            <h3>Azure Fundamentals (AZ-900)</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">Microsoft</p>
+            <a href="URL_DE_TU_PDF_O_CREDLY" class="btn-cert" target="_blank">Ver Credencial</a>
         </div>
+
     </div>
 
 </body>
