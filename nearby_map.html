@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Map | Detalle</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="index.html" class="back-btn">← Volver al inicio</a>
+
+    <div class="project-header">
+        <h1>Nearby Map</h1>
+        <div class="tech-tags">
+            <span class="tech-badge-green">Flutter</span>
+            <span class="tech-badge-green">BLoC / Cubit</span>
+            <span class="tech-badge-green">Isar Local DB</span>
+            <span class="tech-badge-green">Google Maps API</span>
+            <span class="tech-badge-green">Clean Architecture</span>
+        </div>
+        <div class="project-summary">
+            <p><strong>Arquitectura & Optimización de Recursos</strong><br>
+            Desarrollo de una aplicación escalable y paquete reutilizable utilizando Clean Architecture y BLoC. El impacto principal fue la optimización del consumo de APIs para rutas de múltiples destinos y la implementación de almacenamiento local de alto rendimiento para persistir la información del cliente, garantizando disponibilidad inmediata.</p>
+        </div>
+    </div>
+
+    <div class="flow-section">
+        <h2 class="flow-title">Flujo: Búsqueda Optimizada y Acceso Local</h2>
+        
+        <div class="flow-container">
+            <div class="phones-wrapper">
+                <div class="device">
+                    <span class="device-label">Búsqueda (API)</span>
+                    <video src="assets/nearby_map.mp4" controls playsinline poster="assets/poster_search.jpg"></video>
+                </div>
+                <!-- <div class="device">
+                    <span class="device-label">Datos Locales (Isar)</span>
+                    <video src="assets/nearby_offline.mp4" controls playsinline poster="assets/poster_offline.jpg"></video>
+                </div> -->
+            </div>
+
+            <div class="flow-description">
+                <h3>Eficiencia y Reducción de Costos</h3>
+                <p>En lugar de hacer peticiones a Google Places cada vez que el usuario navega por la app, implementé una capa de repositorio inteligente.</p>
+                <ul>
+                    <li><strong>Búsqueda Personalizada:</strong> Algoritmo de filtrado que va más allá de las categorías por defecto de Google.</li>
+                    <li><strong>Reducción de Peticiones:</strong> Caché de rutas multidestino gestionado por BLoC para evitar llamadas redundantes a la red.</li>
+                    <li><strong>Persistencia Local:</strong> Uso de base de datos local para guardar clientes y lugares frecuentes, permitiendo acceso offline y carga instantánea.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

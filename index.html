@@ -7,8 +7,45 @@
     <!-- Enlace a tu nueva hoja de estilos -->
     <link rel="stylesheet" href="styles.css">
     <link href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css)" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+
+    <section class="hero">
+        <div class="hero-photo-container">
+            <img src="assets/paco_g.jpg" alt="Francisco Guzmán" class="profile-img">
+        </div>
+
+        <div class="hero-info">
+            <h1>Francisco Guzmán</h1>
+            <span class="title">Mobile Developer</span>
+            
+            <p class="description">
+                Desarrollador con más de 3 años de experiencia construyendo aplicaciones escalables en Flutter. 
+                Especializado en soluciones basadas en mapas, funciones en tiempo real; despliegue  en App Store y Play Store. 
+                Enfocado en la optimización del rendimiento y el diseño de arquitecturas robustas.
+            </p>
+            <div class="hobbies-section">
+                <p class="hobbies-title">Más allá del código</p>
+                <div class="hobbies-container">
+                    <div class="hobby-item">
+                        <i class="fas fa-language"></i> Aprendizaje de idiomas asiáticos
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-gamepad"></i> eSports & Liderazgo de comunidades
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-magic"></i> Creación de medios con IA Generativa
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <a href="https://github.com/pacomgh" target="_blank" style="color: var(--text-muted); font-size: 1.8rem; margin-right: 1.5rem;"><i class="fab fa-github"></i></a>
+                <a href="https://Linkedin.com/in/pacomgh" target="_blank" style="color: var(--text-muted); font-size: 1.8rem;"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
 
     <header class="home-header">
         <h1>Portafolio de Proyectos</h1>
@@ -27,18 +64,45 @@
             </div>
         </a>
 
+        <!-- Tarjeta mapbox kit -->
+
+        <a href="mapbox_kit.html" class="project-card">
+            <h3>Mapbox Kit Navigation</h3>
+            <p>Librería modular para navegación en tiempo real, con gestión dinámica de rutas y publicación exitosa en el ecosistema pub.dev.</p>
+            <div class="tags">
+                <span class="tag-blue">Flutter</span>
+                <span class="tag-blue">Mapbox</span>
+                <span class="tag-blue">Dart</span>
+                <span class="tag-blue">Pub.dev</span>
+            </div>
+        </a> 
+        
+        <!-- Tarjeta nearby map -->
+
+        <a href="nearby_map.html" class="project-card">
+            <h3>Nearby Map</h3>
+            <p>Solución de enrutamiento y búsqueda optimizada con persistencia local de datos  y reducción de peticiones a APIs.</p>
+            <div class="tags">
+                <span class="tag-blue">Flutter</span>
+                <span class="tag-blue">BLoC / Cubit</span>
+                <span class="tag-blue">Local DB</span>
+                <span class="tag-blue">Google Maps</span>
+            </div>
+        </a>
+
         <!-- Tarjeta Yaab -->
-        <a href="yaab.html" class="project-card">
+        <!-- <a href="yaab.html" class="project-card">
             <h3>Yaab</h3>
             <p>Actualización, seguridad y despliegue a producción de aplicación móvil.</p>
             <div class="tags">
-                <span class="tag-blue">iOS/Android Native</span>
+                <span class="tag-blue">Flutter</span>
                 <span class="tag-blue">Firebase</span>
             </div>
-        </a>
-        
-        <!-- Puedes agregar aquí las tarjetas de Nearby Map y Mapbox Kit -->
+        </a>        -->
     </div>
+
+
+    
 
     <!-- =========================================
          SECCIÓN: LIDERAZGO Y COMUNIDAD
@@ -195,12 +259,12 @@
 
 
         <!-- Tarjeta normal para otras certificaciones (Ej: Azure) -->
-        <div class="cert-card">
+        <!-- <div class="cert-card">
             <i class="fab fa-microsoft cert-icon" style="color: #00a4ef;"></i>
             <h3>Azure Fundamentals (AZ-900)</h3>
             <p style="color: var(--text-muted); font-size: 0.85rem;">Microsoft</p>
             <a href="URL_DE_TU_PDF_O_CREDLY" class="btn-cert" target="_blank">Ver Credencial</a>
-        </div>
+        </div> -->
 
     </div>
 

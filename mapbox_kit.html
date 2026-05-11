@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapbox Kit Navigation | Detalle</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="index.html" class="back-btn">← Volver al inicio</a>
+
+    <div class="project-header">
+        <h1>Mapbox Kit Navigation</h1>
+        <div class="tech-tags">
+            <span class="tech-badge-green">Flutter</span>
+            <span class="tech-badge-green">Dart</span>
+            <span class="tech-badge-green">Mapbox SDK</span>
+            <span class="tech-badge-green">Pub.dev</span>
+        </div>
+        <div class="project-summary">
+            <p><strong>Desarrollo de Librería y Soluciones Modulares</strong><br>
+            Construcción de una librería personalizada en Flutter utilizando Mapbox para simular y gestionar flujos de navegación en tiempo real. La solución fue diseñada bajo principios de modularidad, permitiendo su adaptación rápida a múltiples proyectos y su publicación exitosa en el ecosistema de paquetes de Dart.</p>
+        </div>
+    </div>
+
+    <div class="flow-section">
+        <h2 class="flow-title">Flujo: Navegación Dinámica y Guía de Voz</h2>
+        
+        <div class="flow-container">
+            <div class="phones-wrapper">
+                <div class="device">
+                    <span class="device-label">Gestión de Waypoints</span>
+                    <video src="assets/mapboxkit_waypoint.mp4" controls playsinline poster="assets/poster_nav.jpg"></video>
+                </div>
+                <div class="device">
+                    <span class="device-label">Navegación Activa</span>
+                    <video src="assets/mapboxkit_navigation.mp4" controls playsinline poster="assets/poster_waypoints.jpg"></video>
+                </div>
+            </div>
+
+            <div class="flow-description">
+                <h3>Arquitectura de la Librería</h3>
+                <p>El reto principal fue crear una lógica que permitiera alterar la ruta en pleno movimiento sin perder la integridad de la navegación guiada.</p>
+                <ul>
+                    <li><strong>Gestión Dinámica:</strong> Implementación de lógica para agregar, actualizar y remover paradas (waypoints) en tiempo real durante la ruta.</li>
+                    <li><strong>Guía de Voz:</strong> Integración de segmentos de navegación guiada por voz para mejorar la experiencia de usuario manos libres.</li>
+                    <li><strong>Publicación en Pub.dev:</strong> Manejo completo del ciclo de vida del paquete, desde la documentación técnica hasta el versionado y lanzamiento.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

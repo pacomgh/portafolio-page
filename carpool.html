@@ -22,11 +22,52 @@
         </div>
         <div class="project-summary">
             <p><strong>Arquitectura & Optimización</strong><br>
-            Plataforma de movilidad diseñada para sincronización en tiempo real. Se redujeron problemas de rendimiento en un 15% optimizando controladores y se implementó Clean Architecture para escalabilidad.</p>
+                Plataforma de movilidad diseñada para sincronización en tiempo real. <br>
+                Se redujeron problemas de rendimiento en un 25% optimizando controladores y memory leaks en la interfaz. <br> 
+                Se implementó Clean Architecture para escalabilidad. <br>
+                A continuación se muestran las funcionalidades principales, sin embargo la aplicación cuenta con pantalla:
+                Recompensas,
+                Perfil,
+                Alta de vehiculos,
+                Visualizació de solicitudes pendientes y aceptadas,
+                Cambio de idioma a inglés,
+            </p>
         </div>
     </div>
 
     <!-- FLUJO 1 -->
+    <div class="flow-section">
+        <h2 class="flow-title">Flujo: Creación de ruta</h2>
+        
+        <div class="flow-container">
+            <!-- Izquierda: Los teléfonos -->
+            <div class="phones-wrapper">
+                <div class="device">
+                    <span class="device-label">Vista Conductor</span>
+                    <video controls width="250" src="assets/crear_ruta.mp4" loop muted playsinline></video>
+                </div>
+                <div class="device">
+                    <span class="device-label">Vista Pasajero</span>
+                    <video controls width="250" src="assets/solicitar_ruta.mp4" loop muted playsinline></video>
+                </div>
+            </div>
+
+            <!-- Derecha: Explicación del flujo -->
+            <div class="flow-description">
+                <h3>¿Qué está sucediendo aquí?</h3>
+                <p>En este flujo se demuestra la creación y solicitud de una ruta.</p>
+                <ul>
+                    <li>El conductor selecciona un tipo de ruta.</li>
+                    <li>La ruta necesita un punto de inicio y uno de salida, y puede agregar puntos intermedios por donde pasar.</li>
+                    <li>Una vez creada la ruta el ocupante puede solicitar la ruta.</li>
+                    <li>El conductor recibe una notificación por cada solicitud de pasajero y puede llevar hasta 4 ocupantes.</li>
+                    <li>El ocupante recibe una notificación una vez que su solicitud ha sido aceptada o rechazada.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLUJO 2 -->
     <div class="flow-section">
         <h2 class="flow-title">Flujo: Sincronización de Viaje en Tiempo Real</h2>
         
@@ -34,12 +75,12 @@
             <!-- Izquierda: Los teléfonos -->
             <div class="phones-wrapper">
                 <div class="device">
-                    <span class="device-label">Vista Pasajero</span>
-                    <video src="assets/passenger_request.mp4" autoplay loop muted playsinline></video>
+                    <span class="device-label">Vista Conductor</span>
+                    <video controls width="250" src="assets/viaje_conductor.mp4" loop muted playsinline></video>
                 </div>
                 <div class="device">
-                    <span class="device-label">Vista Conductor</span>
-                    <video src="assets/driver_receive.mp4" autoplay loop muted playsinline></video>
+                    <span class="device-label">Vista Pasajero</span>
+                    <video controls width="250" src="assets/viaje_ocupante.mp4" loop muted playsinline></video>
                 </div>
             </div>
 
@@ -48,15 +89,20 @@
                 <h3>¿Qué está sucediendo aquí?</h3>
                 <p>En este flujo se demuestra la comunicación bidireccional gestionada mediante Sockets, manteniendo una latencia mínima entre la solicitud y la recepción.</p>
                 <ul>
-                    <li>El pasajero establece un punto de recogida arrastrable en el mapa.</li>
-                    <li>El servidor calcula la ruta óptima usando Google Maps APIs.</li>
-                    <li>El conductor recibe la alerta vía push notification integrada en tiempo real.</li>
+                    <li>El conductor inicia alguno de los viajes que tiene programados, viendo la información de este.</li>
+                    <li>Dentro de la pantalla de viaje selecciona unos de sus vehículos disponibles.</li>
+                    <li>El pasajero recibe la alerta vía push notification integrada en tiempo real.</li>
+                    <li>Mientras el conductor se mueve el pasajero puede visualizar su ubicación asi como datos de su viaje.</li>
+                    <li>Cuando el conductor esta en el lugar de recogida del pasajero lo recoge(el evento se envía vía socket).</li>
+                    <li>Cuando ambos estan en el lugar de finalización de viaje ambos finalizan este.</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <!-- Puedes duplicar el bloque "flow-section" completo aquí abajo para agregar un "Flujo 2" -->
+
+     
 
 </body>
 </html>
