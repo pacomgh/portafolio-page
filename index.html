@@ -4,37 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francisco Guzmán | Proyectos</title>
-    <!-- Enlace a tu nueva hoja de estilos -->
     <link rel="stylesheet" href="styles.css">
-    <link href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css)" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="js/lang.js" defer></script>
 </head>
 <body>
 
     <section class="hero">
+        <div class="lang-switch-container">
+            <button id="lang-toggle" class="lang-btn">🇺🇸 English</button>
+        </div>
         <div class="hero-photo-container">
             <img src="assets/paco_g.jpg" alt="Francisco Guzmán" class="profile-img">
         </div>
 
         <div class="hero-info">
             <h1>Francisco Guzmán</h1>
-            <span class="title">Mobile Developer</span>
+            <span class="title i18n" data-es="Mobile Developer" data-en="Mobile Developer">Mobile Developer</span>
             
-            <p class="description">
+            <p class="description i18n" 
+               data-es="Desarrollador con más de 3 años de experiencia construyendo aplicaciones escalables en Flutter. Especializado en soluciones basadas en mapas, funciones en tiempo real; despliegue en App Store y Play Store. Enfocado en la optimización del rendimiento y el diseño de arquitecturas robustas." 
+               data-en="Developer with 3+ years of experience building scalable Flutter applications. Specialized in map-based solutions, real-time features; deployment to App Store and Play Store. Focused on performance optimization and robust architecture design.">
                 Desarrollador con más de 3 años de experiencia construyendo aplicaciones escalables en Flutter. 
-                Especializado en soluciones basadas en mapas, funciones en tiempo real; despliegue  en App Store y Play Store. 
+                Especializado en soluciones basadas en mapas, funciones en tiempo real; despliegue en App Store y Play Store. 
                 Enfocado en la optimización del rendimiento y el diseño de arquitecturas robustas.
             </p>
             <div class="hobbies-section">
-                <p class="hobbies-title">Más allá del código</p>
+                <p class="hobbies-title i18n" data-es="Más allá del código" data-en="Beyond the code">Más allá del código</p>
                 <div class="hobbies-container">
-                    <div class="hobby-item">
+                    <div class="hobby-item i18n" data-es='<i class="fas fa-language"></i> Aprendizaje de idiomas asiáticos' data-en='<i class="fas fa-language"></i> Learning Asian languages'>
                         <i class="fas fa-language"></i> Aprendizaje de idiomas asiáticos
                     </div>
-                    <div class="hobby-item">
+                    <div class="hobby-item i18n" data-es='<i class="fas fa-gamepad"></i> eSports & Liderazgo de comunidades' data-en='<i class="fas fa-gamepad"></i> eSports & Community Leadership'>
                         <i class="fas fa-gamepad"></i> eSports & Liderazgo de comunidades
                     </div>
-                    <div class="hobby-item">
+                    <div class="hobby-item i18n" data-es='<i class="fas fa-magic"></i> Creación de medios con IA Generativa' data-en='<i class="fas fa-magic"></i> Media creation with Generative AI'>
                         <i class="fas fa-magic"></i> Creación de medios con IA Generativa
                     </div>
                 </div>
@@ -48,15 +52,44 @@
     </section>
 
     <header class="home-header">
-        <h1>Portafolio de Proyectos</h1>
-        <p>Selecciona un proyecto para ver a detalle la arquitectura y flujos operativos.</p>
+        <h1 class="i18n" data-es="Portafolio de Proyectos" data-en="Projects Portfolio">Portafolio de Proyectos</h1>
+        <p class="i18n" data-es="Selecciona un proyecto para ver a detalle la arquitectura y flujos operativos." data-en="Select a project to see its architecture and operational flows in detail.">Selecciona un proyecto para ver a detalle la arquitectura y flujos operativos.</p>
     </header>
 
     <div class="grid-container">
-        <!-- Tarjeta Carpool -->
+
+        <a href="nuiclinic.html" class="project-card">
+            <h3>Wellness Management</h3>
+            <p class="i18n" 
+               data-es="Arquitectura Clean y Feature-First para sistema de gestión integral. Implementación de GoRouter, UI Kits globales y estrategia de persistencia offline como Tech Lead." 
+               data-en="Clean and Feature-First architecture for an all-in-one management system. Implementation of GoRouter, global UI Kits, and offline persistence strategy as Tech Lead.">
+               Arquitectura Clean y Feature-First para sistema de gestión integral. Implementación de GoRouter, UI Kits globales y estrategia de persistencia offline como Tech Lead.
+            </p>
+            <div class="tags">
+                <span class="tag-blue">Flutter</span>
+                <span class="tag-blue">Clean Arch</span>
+                <span class="tag-blue">BLoC</span>
+            </div>
+        </a>
+
+        <a href="sports.html" class="project-card">
+            <h3>Sports Analytics</h3>
+            <p class="i18n" 
+               data-es="Aplicación iOS nativa. Liderazgo técnico en arquitectura modular por dominios, SwiftData offline-first y renderizado complejo de interfaz con trigonometría pura." 
+               data-en="Native iOS application. Technical leadership in domain-driven modular architecture, offline-first SwiftData, and complex UI rendering using pure trigonometry.">
+               Aplicación iOS nativa. Liderazgo técnico en arquitectura modular por dominios, SwiftData offline-first y renderizado complejo de interfaz con trigonometría pura.
+            </p>
+            <div class="tags">
+                <span class="tag-blue">Swift Native</span>
+                <span class="tag-blue">SwiftData</span>
+                <span class="tag-blue">GeometryReader</span>
+                <span class="tag-blue">Tech Lead</span>
+            </div>
+        </a>
+
         <a href="carpool.html" class="project-card">
             <h3>Carpool App</h3>
-            <p>Plataforma de movilidad con gestión de rutas y sincronización en tiempo real.</p>
+            <p class="i18n" data-es="Plataforma de movilidad con gestión de rutas y sincronización en tiempo real." data-en="Mobility platform with route management and real-time synchronization.">Plataforma de movilidad con gestión de rutas y sincronización en tiempo real.</p>
             <div class="tags">
                 <span class="tag-blue">Flutter</span>
                 <span class="tag-blue">Sockets</span>
@@ -64,11 +97,9 @@
             </div>
         </a>
 
-        <!-- Tarjeta mapbox kit -->
-
         <a href="mapbox_kit.html" class="project-card">
             <h3>Mapbox Kit Navigation</h3>
-            <p>Librería modular para navegación en tiempo real, con gestión dinámica de rutas y publicación exitosa en el ecosistema pub.dev.</p>
+            <p class="i18n" data-es="Librería modular para navegación en tiempo real, con gestión dinámica de rutas y publicación exitosa en el ecosistema pub.dev." data-en="Modular library for real-time navigation, with dynamic route management and successful publication on the pub.dev ecosystem.">Librería modular para navegación en tiempo real, con gestión dinámica de rutas y publicación exitosa en el ecosistema pub.dev.</p>
             <div class="tags">
                 <span class="tag-blue">Flutter</span>
                 <span class="tag-blue">Mapbox</span>
@@ -77,11 +108,9 @@
             </div>
         </a> 
         
-        <!-- Tarjeta nearby map -->
-
         <a href="nearby_map.html" class="project-card">
             <h3>Nearby Map</h3>
-            <p>Solución de enrutamiento y búsqueda optimizada con persistencia local de datos  y reducción de peticiones a APIs.</p>
+            <p class="i18n" data-es="Solución de enrutamiento y búsqueda optimizada con persistencia local de datos y reducción de peticiones a APIs." data-en="Optimized routing and search solution with local data persistence and reduced API requests.">Solución de enrutamiento y búsqueda optimizada con persistencia local de datos y reducción de peticiones a APIs.</p>
             <div class="tags">
                 <span class="tag-blue">Flutter</span>
                 <span class="tag-blue">BLoC / Cubit</span>
@@ -89,113 +118,85 @@
                 <span class="tag-blue">Google Maps</span>
             </div>
         </a>
-
-        <!-- Tarjeta Yaab -->
-        <!-- <a href="yaab.html" class="project-card">
-            <h3>Yaab</h3>
-            <p>Actualización, seguridad y despliegue a producción de aplicación móvil.</p>
-            <div class="tags">
-                <span class="tag-blue">Flutter</span>
-                <span class="tag-blue">Firebase</span>
-            </div>
-        </a>        -->
     </div>
 
-
-    
-
-    <!-- =========================================
-         SECCIÓN: LIDERAZGO Y COMUNIDAD
-         ========================================= -->
-    <h2 class="section-title">Liderazgo, Comunidades y Reconocimientos</h2>
+    <h2 class="section-title i18n" data-es="Liderazgo, Comunidades y Reconocimientos" data-en="Leadership, Communities & Awards">Liderazgo, Comunidades y Reconocimientos</h2>
     
     <div class="community-grid">
-        <!-- Microsoft Learn Student Ambassador -->
         <div class="community-card">
             <div class="community-header">
                 <i class="fab fa-windows community-icon"></i>
                 <div>
                     <h3>Microsoft Learn Student Ambassador</h3>
-                    <h4>Abr 2020 - 2024</h4>
+                    <h4 class="i18n" data-es="Abr 2020 - 2024" data-en="Apr 2020 - 2024">Abr 2020 - 2024</h4>
                 </div>
             </div>
             <ul class="community-list">
-                <li>Co-fundador y organizador de <strong>Hack LATAM</strong> (300+ estudiantes).</li>
-                <li>Coordinación de eventos AI Gaming con un alcance de <strong>3,000+ asistentes</strong>[cite: 1].</li>
-                <li>Mentor de embajadores tecnológicos a lo largo de LATAM y Brasil[cite: 1].</li>
+                <li class="i18n" data-es="Co-fundador y organizador de <strong>Hack LATAM</strong> (300+ estudiantes)." data-en="Co-founder and organizer of <strong>Hack LATAM</strong> (300+ students).">Co-fundador y organizador de <strong>Hack LATAM</strong> (300+ estudiantes).</li>
+                <li class="i18n" data-es="Coordinación de eventos AI Gaming con un alcance de <strong>3,000+ asistentes</strong>." data-en="Coordinated AI Gaming events reaching <strong>3,000+ attendees</strong>.">Coordinación de eventos AI Gaming con un alcance de <strong>3,000+ asistentes</strong>.</li>
+                <li class="i18n" data-es="Mentor de embajadores tecnológicos a lo largo de LATAM y Brasil." data-en="Mentored tech ambassadors across LATAM and Brazil.">Mentor de embajadores tecnológicos a lo largo de LATAM y Brasil.</li>
             </ul>
         </div>
 
-        <!-- GitHub Campus Expert -->
         <div class="community-card">
             <div class="community-header">
                 <i class="fab fa-github community-icon"></i>
                 <div>
                     <h3>GitHub Campus Expert</h3>
-                    <h4>Ago 2021 - 2024</h4>
+                    <h4 class="i18n" data-es="Ago 2021 - 2024" data-en="Aug 2021 - 2024">Ago 2021 - 2024</h4>
                 </div>
             </div>
             <ul class="community-list">
-                <li>Co-organizador de <strong>DevFest LATAM</strong> (500+ asistentes, 3 tracks)[cite: 1].</li>
-                <li>Líder de <strong>GitHub Field Day México</strong> (~100 asistentes)[cite: 1].</li>
-                <li>Mentoría a equipos para la creación y crecimiento de comunidades tech en LATAM[cite: 1].</li>
+                <li class="i18n" data-es="Co-organizador de <strong>DevFest LATAM</strong> (500+ asistentes, 3 tracks)." data-en="Co-organized <strong>DevFest LATAM</strong> (500+ attendees, 3 tracks).">Co-organizador de <strong>DevFest LATAM</strong> (500+ asistentes, 3 tracks).</li>
+                <li class="i18n" data-es="Líder de <strong>GitHub Field Day México</strong> (~100 asistentes)." data-en="Led <strong>GitHub Field Day Mexico</strong> (~100 attendees).">Líder de <strong>GitHub Field Day México</strong> (~100 asistentes).</li>
+                <li class="i18n" data-es="Mentoría a equipos para la creación y crecimiento de comunidades tech en LATAM." data-en="Mentored teams on creating and growing tech communities across LATAM.">Mentoría a equipos para la creación y crecimiento de comunidades tech en LATAM.</li>
             </ul>
         </div>
 
-        <!-- Experiencia Extra de Liderazgo -->
         <div class="community-card">
             <div class="community-header">
                 <i class="fas fa-users community-icon"></i>
                 <div>
-                    <h3>Experiencia de Liderazgo</h3>
-                    <h4>Eventos e Iniciativas Universitarias</h4>
+                    <h3 class="i18n" data-es="Experiencia de Liderazgo" data-en="Leadership Experience">Experiencia de Liderazgo</h3>
+                    <h4 class="i18n" data-es="Eventos e Iniciativas Universitarias" data-en="University Events & Initiatives">Eventos e Iniciativas Universitarias</h4>
                 </div>
             </div>
             <ul class="community-list">
-                <li>Fundador y líder del club universitario de eSports (GGTech Esports México)[cite: 1].</li>
-                <li>Líder de un club de entrenamiento para hackathons durante 4 años[cite: 1].</li>
-                <li>Co-organizador de Local Hack Day (ITL) y GDSC LATAM Conference[cite: 1].</li>
+                <li class="i18n" data-es="Fundador y líder del club universitario de eSports (GGTech Esports México)." data-en="Founder and leader of the university eSports club (GGTech Esports Mexico).">Fundador y líder del club universitario de eSports (GGTech Esports México).</li>
+                <li class="i18n" data-es="Líder de un club de entrenamiento para hackathons durante 4 años." data-en="Led a hackathon training club for 4 years.">Líder de un club de entrenamiento para hackathons durante 4 años.</li>
+                <li class="i18n" data-es="Co-organizador de Local Hack Day (ITL) y GDSC LATAM Conference." data-en="Co-organized Local Hack Day (ITL) and GDSC LATAM Conference.">Co-organizador de Local Hack Day (ITL) y GDSC LATAM Conference.</li>
             </ul>
         </div>
 
-        <!-- Premios y Reconocimientos -->
         <div class="community-card">
             <div class="community-header">
                 <i class="fas fa-trophy community-icon" style="color: #ffd700;"></i>
                 <div>
-                    <h3>Premios (Hackathons & Innovación)</h3>
-                    <h4>Competencias Nacionales e Internacionales</h4>
+                    <h3 class="i18n" data-es="Premios (Hackathons & Innovación)" data-en="Awards (Hackathons & Innovation)">Premios (Hackathons & Innovación)</h3>
+                    <h4 class="i18n" data-es="Competencias Nacionales e Internacionales" data-en="National and International Competitions">Competencias Nacionales e Internacionales</h4>
                 </div>
             </div>
             <ul class="community-list">
-                <li><strong>1er Lugar:</strong> Evento Nacional de Innovación Estudiantil (México)[cite: 1].</li>
-                <li><strong>1er Lugar:</strong> UNAMxHacks (Microsoft & KIO Networks)[cite: 1].</li>
-                <li><strong>1er Lugar:</strong> Hack León[cite: 1].</li>
-                <li><strong>2do Lugar:</strong> AngelHack (EY & IBM)[cite: 1].</li>
-                <li>Reconocimiento como <strong>Líder Kybernus 2023</strong>[cite: 1].</li>
+                <li class="i18n" data-es="<strong>1er Lugar:</strong> Evento Nacional de Innovación Estudiantil (México)." data-en="<strong>1st Place:</strong> National Student Innovation Event (Mexico)."><strong>1er Lugar:</strong> Evento Nacional de Innovación Estudiantil (México).</li>
+                <li class="i18n" data-es="<strong>1er Lugar:</strong> UNAMxHacks (Microsoft & KIO Networks)." data-en="<strong>1st Place:</strong> UNAMxHacks (Microsoft & KIO Networks)."><strong>1er Lugar:</strong> UNAMxHacks (Microsoft & KIO Networks).</li>
+                <li class="i18n" data-es="<strong>1er Lugar:</strong> Hack León." data-en="<strong>1st Place:</strong> Hack León."><strong>1er Lugar:</strong> Hack León.</li>
+                <li class="i18n" data-es="<strong>2do Lugar:</strong> AngelHack (EY & IBM)." data-en="<strong>2nd Place:</strong> AngelHack (EY & IBM)."><strong>2do Lugar:</strong> AngelHack (EY & IBM).</li>
+                <li class="i18n" data-es="Reconocimiento como <strong>Líder Kybernus 2023</strong>." data-en="Recognized as <strong>Kybernus Leader 2023</strong>.">Reconocimiento como <strong>Líder Kybernus 2023</strong>.</li>
             </ul>
         </div>
     </div>
 
-    <!-- =========================================
-         SECCIÓN: CERTIFICACIONES
-         ========================================= -->
-    <!-- =========================================
-         SECCIÓN: CERTIFICACIONES
-         ========================================= -->
-    <h2 class="section-title">Certificaciones Profesionales</h2>
+    <h2 class="section-title i18n" data-es="Certificaciones Profesionales" data-en="Professional Certifications">Certificaciones Profesionales</h2>
     
     <div class="cert-grid">
         
-        <!-- CERTIFICADO PREMIUM: Google AI -->
         <div class="cert-card premium">
             <i class="fab fa-google cert-icon" style="font-size: 4rem; color: #fff;"></i>
             
             <div class="premium-content">
                 <h3>Google AI Professional Certificate</h3>
-                <p>Programa de especialización oficial de Google enfocado en Inteligencia Artificial Generativa y Modelos de Lenguaje.</p>
+                <p class="i18n" data-es="Programa de especialización oficial de Google enfocado en Inteligencia Artificial Generativa y Modelos de Lenguaje." data-en="Official Google specialization program focused on Generative Artificial Intelligence and Large Language Models.">Programa de especialización oficial de Google enfocado en Inteligencia Artificial Generativa y Modelos de Lenguaje.</p>
                 
-                <!-- Aquí listamos los módulos o "badges" internos -->
                 <div class="sub-certs-tags">
                     <span class="sub-cert-tag"><i class="fas fa-check-circle" style="color: #34A853;"></i>Prompt Engineering</span>
                     <span class="sub-cert-tag"><i class="fas fa-check-circle" style="color: #34A853;"></i>Large Language Models (LLMs)</span>
@@ -207,65 +208,43 @@
                     <span class="sub-cert-tag"><i class="fas fa-check-circle" style="color: #34A853;"></i>AI for App Building</span>
                 </div>
 
-                <!-- EL ENLACE: Aquí pones la URL de Coursera o la ruta local de tu PDF -->
-                <!-- Ejemplo con PDF local: href="assets/certs/google_ai_certificate.pdf" -->
-                <!-- Ejemplo con URL de Coursera: href="https://coursera.org/verify/professional-cert/TU_ID" -->
-                <a href="https://www.credly.com/badges/00ebe5a5-2566-4bf3-b930-1bf9bbb249e8/public_url" class="btn-cert" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.credly.com/badges/00ebe5a5-2566-4bf3-b930-1bf9bbb249e8/public_url" class="btn-cert i18n" data-es='<i class="fas fa-external-link-alt"></i> Ver Certificado Oficial' data-en='<i class="fas fa-external-link-alt"></i> View Official Certificate' target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-external-link-alt"></i> Ver Certificado Oficial
                 </a>
             </div>
         </div>
 
-        <!-- Tarjeta normal para diplomado ia tecnm -->
-
-        <!-- CERTIFICADO PREMIUM: Diplomado IA (TecNM / Gob.MX) -->
         <div class="cert-card premium premium-tecnm">
-            <!-- Icono institucional con toque dorado/arena para contrastar en el fondo oscuro -->
             <i class="fas fa-university cert-icon" style="font-size: 4rem; color: #D4C19C;"></i>
             
             <div class="premium-content">
-                <h3>Diplomado: Integración de Inteligencia Artificial en Escenarios de Aprendizaje</h3>
+                <h3 class="i18n" data-es="Diplomado: Integración de Inteligencia Artificial en Escenarios de Aprendizaje" data-en="Diploma: Integration of Artificial Intelligence in Learning Environments">Diplomado: Integración de Inteligencia Artificial en Escenarios de Aprendizaje</h3>
                 <p>
-                    <!-- El nombre de la institución en el color guinda que solicitaste -->
-                    <strong style="color: #fff; font-size: 1.1rem;">Tecnológico Nacional de México (TecNM)</strong><br>
-                    <span style="font-size: 0.9rem;">Enero 14 - Mayo 23, 2025</span><br><br>
-                    Programa enfocado en la aplicación práctica de herramientas de IA para optimizar procesos formativos, creación de contenido y evaluación asistida.
+                    <strong class="i18n" data-es="Tecnológico Nacional de México (TecNM)" data-en="National Technological Institute of Mexico (TecNM)" style="color: #fff; font-size: 1.1rem;">Tecnológico Nacional de México (TecNM)</strong><br>
+                    <span class="i18n" data-es="Enero 14 - Mayo 23, 2025" data-en="January 14 - May 23, 2025" style="font-size: 0.9rem;">Enero 14 - Mayo 23, 2025</span><br><br>
+                    <span class="i18n" data-es="Programa enfocado en la aplicación práctica de herramientas de IA para optimizar procesos formativos, creación de contenido y evaluación asistida." data-en="Program focused on the practical application of AI tools to optimize educational processes, content creation, and assisted evaluation.">Programa enfocado en la aplicación práctica de herramientas de IA para optimizar procesos formativos, creación de contenido y evaluación asistida.</span>
                 </p>
                 
-                <!-- Módulos / Temario del Diplomado -->
                 <div class="sub-certs-tags">
-                    <span class="sub-cert-tag">
+                    <span class="sub-cert-tag i18n" data-es='<i class="fas fa-robot" style="color: #e6edf3;"></i> Fundamentos de IA Generativa' data-en='<i class="fas fa-robot" style="color: #e6edf3;"></i> Generative AI Fundamentals'>
                         <i class="fas fa-robot" style="color: #e6edf3;"></i> Fundamentos de IA Generativa
                     </span>
-                    <span class="sub-cert-tag">
+                    <span class="sub-cert-tag i18n" data-es='<i class="fas fa-terminal" style="color: #e6edf3;"></i> Prompt Engineering Educativo' data-en='<i class="fas fa-terminal" style="color: #e6edf3;"></i> Educational Prompt Engineering'>
                         <i class="fas fa-terminal" style="color: #e6edf3;"></i> Prompt Engineering Educativo
                     </span>
-                    <span class="sub-cert-tag">
+                    <span class="sub-cert-tag i18n" data-es='<i class="fas fa-tasks" style="color: #e6edf3;"></i> Evaluación y Retroalimentación' data-en='<i class="fas fa-tasks" style="color: #e6edf3;"></i> Evaluation and Feedback'>
                         <i class="fas fa-tasks" style="color: #e6edf3;"></i> Evaluación y Retroalimentación
                     </span>
-                    <span class="sub-cert-tag">
+                    <span class="sub-cert-tag i18n" data-es='<i class="fas fa-balance-scale" style="color: #e6edf3;"></i> Ética y Uso Responsable' data-en='<i class="fas fa-balance-scale" style="color: #e6edf3;"></i> Ethics and Responsible Use'>
                         <i class="fas fa-balance-scale" style="color: #e6edf3;"></i> Ética y Uso Responsable
                     </span>
                 </div>
 
-                <!-- Enlace al PDF local -->
-                <a href="https://drive.google.com/file/d/1ixjvuTrRqzjVGYi3NQLY2xaQPGHPBDfU/view?usp=sharing" class="btn-cert" target="_blank" rel="noopener noreferrer" style="border-color: #58151c; color: #e6edf3; background-color: rgba(88, 21, 28, 0.2);">
+                <a href="https://drive.google.com/file/d/1ixjvuTrRqzjVGYi3NQLY2xaQPGHPBDfU/view?usp=sharing" class="btn-cert i18n" data-es='<i class="fas fa-file-pdf"></i> Ver Diploma Oficial' data-en='<i class="fas fa-file-pdf"></i> View Official Diploma' target="_blank" rel="noopener noreferrer" style="border-color: #58151c; color: #e6edf3; background-color: rgba(88, 21, 28, 0.2);">
                     <i class="fas fa-file-pdf"></i> Ver Diploma Oficial
                 </a>
             </div>
         </div>
-
-
-
-
-        <!-- Tarjeta normal para otras certificaciones (Ej: Azure) -->
-        <!-- <div class="cert-card">
-            <i class="fab fa-microsoft cert-icon" style="color: #00a4ef;"></i>
-            <h3>Azure Fundamentals (AZ-900)</h3>
-            <p style="color: var(--text-muted); font-size: 0.85rem;">Microsoft</p>
-            <a href="URL_DE_TU_PDF_O_CREDLY" class="btn-cert" target="_blank">Ver Credencial</a>
-        </div> -->
-
     </div>
 
 </body>

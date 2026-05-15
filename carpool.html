@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carpool App | Detalle</title>
-    <!-- Enlace a tu nueva hoja de estilos -->
     <link rel="stylesheet" href="styles.css">
+    <script src="js/lang.js" defer></script>
 </head>
 <body>
 
-    <a href="index.html" class="back-btn">← Volver al inicio</a>
+    <a href="index.html" class="back-btn i18n" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
 
-    <!-- ENCABEZADO -->
     <div class="project-header">
         <h1>Carpool App</h1>
         <div class="tech-tags">
@@ -21,88 +20,77 @@
             <span class="tech-badge-green">Google Maps API</span>
         </div>
         <div class="project-summary">
-            <p><strong>Arquitectura & Optimización</strong><br>
+            <p class="i18n" 
+               data-es="<strong>Arquitectura & Optimización</strong><br>Plataforma de movilidad diseñada para sincronización en tiempo real. <br>Se redujeron problemas de rendimiento en un 25% optimizando controladores y memory leaks en la interfaz. <br>Se implementó Clean Architecture para escalabilidad. <br>A continuación se muestran las funcionalidades principales, sin embargo la aplicación cuenta con pantalla: Recompensas, Perfil, Alta de vehiculos, Visualizació de solicitudes pendientes y aceptadas, Cambio de idioma a inglés." 
+               data-en="<strong>Architecture & Optimization</strong><br>Mobility platform designed for real-time synchronization. <br>Reduced performance issues by 25% by optimizing controllers and UI memory leaks. <br>Implemented Clean Architecture for scalability. <br>Main functionalities are shown below; however, the app also features: Rewards screen, Profile, Vehicle registration, View of pending and accepted requests, and English language support.">
+               <strong>Arquitectura & Optimización</strong><br>
                 Plataforma de movilidad diseñada para sincronización en tiempo real. <br>
                 Se redujeron problemas de rendimiento en un 25% optimizando controladores y memory leaks en la interfaz. <br> 
                 Se implementó Clean Architecture para escalabilidad. <br>
                 A continuación se muestran las funcionalidades principales, sin embargo la aplicación cuenta con pantalla:
-                Recompensas,
-                Perfil,
-                Alta de vehiculos,
-                Visualizació de solicitudes pendientes y aceptadas,
-                Cambio de idioma a inglés,
+                Recompensas, Perfil, Alta de vehiculos, Visualizació de solicitudes pendientes y aceptadas, Cambio de idioma a inglés.
             </p>
         </div>
     </div>
 
-    <!-- FLUJO 1 -->
     <div class="flow-section">
-        <h2 class="flow-title">Flujo: Creación de ruta</h2>
+        <h2 class="flow-title i18n" data-es="Flujo: Creación de ruta" data-en="Flow: Route Creation">Flujo: Creación de ruta</h2>
         
         <div class="flow-container">
-            <!-- Izquierda: Los teléfonos -->
             <div class="phones-wrapper">
                 <div class="device">
-                    <span class="device-label">Vista Conductor</span>
+                    <span class="device-label i18n" data-es="Vista Conductor" data-en="Driver View">Vista Conductor</span>
                     <video controls width="250" src="assets/crear_ruta.mp4" loop muted playsinline></video>
                 </div>
                 <div class="device">
-                    <span class="device-label">Vista Pasajero</span>
+                    <span class="device-label i18n" data-es="Vista Pasajero" data-en="Passenger View">Vista Pasajero</span>
                     <video controls width="250" src="assets/solicitar_ruta.mp4" loop muted playsinline></video>
                 </div>
             </div>
 
-            <!-- Derecha: Explicación del flujo -->
             <div class="flow-description">
-                <h3>¿Qué está sucediendo aquí?</h3>
-                <p>En este flujo se demuestra la creación y solicitud de una ruta.</p>
+                <h3 class="i18n" data-es="¿Qué está sucediendo aquí?" data-en="What is happening here?">¿Qué está sucediendo aquí?</h3>
+                <p class="i18n" data-es="En este flujo se demuestra la creación y solicitud de una ruta." data-en="This flow demonstrates the creation and request of a route.">En este flujo se demuestra la creación y solicitud de una ruta.</p>
                 <ul>
-                    <li>El conductor selecciona un tipo de ruta.</li>
-                    <li>La ruta necesita un punto de inicio y uno de salida, y puede agregar puntos intermedios por donde pasar.</li>
-                    <li>Una vez creada la ruta el ocupante puede solicitar la ruta.</li>
-                    <li>El conductor recibe una notificación por cada solicitud de pasajero y puede llevar hasta 4 ocupantes.</li>
-                    <li>El ocupante recibe una notificación una vez que su solicitud ha sido aceptada o rechazada.</li>
+                    <li class="i18n" data-es="El conductor selecciona un tipo de ruta." data-en="The driver selects a route type.">El conductor selecciona un tipo de ruta.</li>
+                    <li class="i18n" data-es="La ruta necesita un punto de inicio y uno de salida, y puede agregar puntos intermedios por donde pasar." data-en="The route requires a start and end point, and intermediate waypoints can be added.">La ruta necesita un punto de inicio y uno de salida, y puede agregar puntos intermedios por donde pasar.</li>
+                    <li class="i18n" data-es="Una vez creada la ruta el ocupante puede solicitar la ruta." data-en="Once the route is created, the passenger can request it.">Una vez creada la ruta el ocupante puede solicitar la ruta.</li>
+                    <li class="i18n" data-es="El conductor recibe una notificación por cada solicitud de pasajero y puede llevar hasta 4 ocupantes." data-en="The driver receives a notification for each passenger request and can take up to 4 occupants.">El conductor recibe una notificación por cada solicitud de pasajero y puede llevar hasta 4 ocupantes.</li>
+                    <li class="i18n" data-es="El ocupante recibe una notificación una vez que su solicitud ha sido aceptada o rechazada." data-en="The occupant receives a notification once their request is accepted or rejected.">El ocupante recibe una notificación una vez que su solicitud ha sido aceptada o rechazada.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- FLUJO 2 -->
     <div class="flow-section">
-        <h2 class="flow-title">Flujo: Sincronización de Viaje en Tiempo Real</h2>
+        <h2 class="flow-title i18n" data-es="Flujo: Sincronización de Viaje en Tiempo Real" data-en="Flow: Real-Time Trip Synchronization">Flujo: Sincronización de Viaje en Tiempo Real</h2>
         
         <div class="flow-container">
-            <!-- Izquierda: Los teléfonos -->
             <div class="phones-wrapper">
                 <div class="device">
-                    <span class="device-label">Vista Conductor</span>
+                    <span class="device-label i18n" data-es="Vista Conductor" data-en="Driver View">Vista Conductor</span>
                     <video controls width="250" src="assets/viaje_conductor.mp4" loop muted playsinline></video>
                 </div>
                 <div class="device">
-                    <span class="device-label">Vista Pasajero</span>
+                    <span class="device-label i18n" data-es="Vista Pasajero" data-en="Passenger View">Vista Pasajero</span>
                     <video controls width="250" src="assets/viaje_ocupante.mp4" loop muted playsinline></video>
                 </div>
             </div>
 
-            <!-- Derecha: Explicación del flujo -->
             <div class="flow-description">
-                <h3>¿Qué está sucediendo aquí?</h3>
-                <p>En este flujo se demuestra la comunicación bidireccional gestionada mediante Sockets, manteniendo una latencia mínima entre la solicitud y la recepción.</p>
+                <h3 class="i18n" data-es="¿Qué está sucediendo aquí?" data-en="What is happening here?">¿Qué está sucediendo aquí?</h3>
+                <p class="i18n" data-es="En este flujo se demuestra la comunicación bidireccional gestionada mediante Sockets, manteniendo una latencia mínima entre la solicitud y la recepción." data-en="This flow demonstrates bidirectional communication managed via Sockets, maintaining minimal latency between request and reception.">En este flujo se demuestra la comunicación bidireccional gestionada mediante Sockets, manteniendo una latencia mínima entre la solicitud y la recepción.</p>
                 <ul>
-                    <li>El conductor inicia alguno de los viajes que tiene programados, viendo la información de este.</li>
-                    <li>Dentro de la pantalla de viaje selecciona unos de sus vehículos disponibles.</li>
-                    <li>El pasajero recibe la alerta vía push notification integrada en tiempo real.</li>
-                    <li>Mientras el conductor se mueve el pasajero puede visualizar su ubicación asi como datos de su viaje.</li>
-                    <li>Cuando el conductor esta en el lugar de recogida del pasajero lo recoge(el evento se envía vía socket).</li>
-                    <li>Cuando ambos estan en el lugar de finalización de viaje ambos finalizan este.</li>
+                    <li class="i18n" data-es="El conductor inicia alguno de los viajes que tiene programados, viendo la información de este." data-en="The driver starts one of their scheduled trips, viewing its details.">El conductor inicia alguno de los viajes que tiene programados, viendo la información de este.</li>
+                    <li class="i18n" data-es="Dentro de la pantalla de viaje selecciona unos de sus vehículos disponibles." data-en="Within the trip screen, they select one of their available vehicles.">Dentro de la pantalla de viaje selecciona unos de sus vehículos disponibles.</li>
+                    <li class="i18n" data-es="El pasajero recibe la alerta vía push notification integrada en tiempo real." data-en="The passenger receives the alert via integrated real-time push notification.">El pasajero recibe la alerta vía push notification integrada en tiempo real.</li>
+                    <li class="i18n" data-es="Mientras el conductor se mueve el pasajero puede visualizar su ubicación asi como datos de su viaje." data-en="While the driver moves, the passenger can view their location as well as trip data.">Mientras el conductor se mueve el pasajero puede visualizar su ubicación asi como datos de su viaje.</li>
+                    <li class="i18n" data-es="Cuando el conductor esta en el lugar de recogida del pasajero lo recoge(el evento se envía vía socket)." data-en="When the driver is at the passenger's pickup location, they pick them up (event sent via socket).">Cuando el conductor esta en el lugar de recogida del pasajero lo recoge(el evento se envía vía socket).</li>
+                    <li class="i18n" data-es="Cuando ambos estan en el lugar de finalización de viaje ambos finalizan este." data-en="When both are at the drop-off location, both complete the trip.">Cuando ambos estan en el lugar de finalización de viaje ambos finalizan este.</li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <!-- Puedes duplicar el bloque "flow-section" completo aquí abajo para agregar un "Flujo 2" -->
-
-     
 
 </body>
 </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Management | Tech Lead</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/lang.js" defer></script>
+    <style>
+        /* Estilo especial para imágenes de arquitectura en lugar de teléfonos */
+        .architecture-wrapper {
+            flex: 1;
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .architecture-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn i18n" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
+
+    <div class="project-header">
+        <h1>Wellness Management</h1>
+        <div class="tech-tags">
+            <span class="tech-badge-green">Tech Lead</span>
+            <span class="tech-badge-green">Flutter</span>
+            <span class="tech-badge-green">Clean Architecture</span>
+            <span class="tech-badge-green">BLoC / GoRouter</span>
+            <span class="tech-badge-green">In Development</span>
+        </div>
+        <div class="project-summary">
+            <p class="i18n" 
+               data-es="<strong>Liderazgo Técnico & Escalabilidad</strong><br>Diseño base e implementación de Clean Architecture bajo una estructura Feature-First para un sistema de gestión integral. Estandarización del manejo de estado global, políticas estrictas de código limpio y desarrollo de un UI Kit modular para acelerar la entrega de nuevas características." 
+               data-en="<strong>Technical Leadership & Scalability</strong><br>Base design and implementation of Clean Architecture under a Feature-First structure for a comprehensive management system. Standardization of global state management, strict clean code policies, and development of a modular UI Kit to accelerate feature delivery.">
+               <strong>Liderazgo Técnico & Escalabilidad</strong><br>Diseño base e implementación de Clean Architecture bajo una estructura Feature-First para un sistema de gestión integral. Estandarización del manejo de estado global, políticas estrictas de código limpio y desarrollo de un UI Kit modular para acelerar la entrega de nuevas características.
+            </p>
+        </div>
+    </div>
+
+    <div class="flow-section">
+        <h2 class="flow-title i18n" data-es="Infraestructura: Enrutamiento y Persistencia" data-en="Infrastructure: Routing and Persistence">Infraestructura: Enrutamiento y Persistencia</h2>
+        
+        <div class="flow-container">
+            <!-- <div class="architecture-wrapper">
+                <img src="assets/nuiclinic_architecture.png" alt="Clean Architecture Diagram" class="architecture-img">
+            </div> -->
+
+            <div class="flow-description">
+                <h3 class="i18n" data-es="Estandarización y Buenas Prácticas" data-en="Standardization and Best Practices">Estandarización y Buenas Prácticas</h3>
+                <!-- <p class="i18n" data-es="Como Tech Lead, la prioridad fue establecer cimientos robustos que permitan el crecimiento del equipo de desarrollo sin acumular deuda técnica." data-en="As Tech Lead, the priority was to establish robust foundations that allow the development team to grow without accumulating technical debt.">Como Tech Lead, la prioridad fue establecer cimientos robustos que permitan el crecimiento del equipo de desarrollo sin acumular deuda técnica.</p> -->
+                <ul>
+                    <li class="i18n" data-es="<strong>Enrutamiento Declarativo:</strong> Configuración avanzada utilizando GoRouter con ShellRoute para persistencia de la barra de navegación y transiciones fluidas." data-en="<strong>Declarative Routing:</strong> Advanced configuration using GoRouter with ShellRoute for navigation bar persistence and fluid transitions."><strong>Enrutamiento Declarativo:</strong> Configuración avanzada utilizando GoRouter con ShellRoute para persistencia de la barra de navegación y transiciones fluidas.</li>
+                    <li class="i18n" data-es="<strong>Estrategia Offline-First:</strong> Arquitecturización de un flujo de almacenamiento local estructurado, preparando el terreno para bases de datos NoSQL de alto rendimiento." data-en="<strong>Offline-First Strategy:</strong> Architecting a structured local storage flow, paving the way for high-performance NoSQL databases."><strong>Estrategia Offline-First:</strong> Arquitecturización de un flujo de almacenamiento local estructurado, preparando el terreno para bases de datos NoSQL de alto rendimiento.</li>
+                    <li class="i18n" data-es="<strong>Cultura de Código Limpio:</strong> Diseño de políticas para desacoplar estrictamente la capa UI de la lógica de negocio, garantizando testeabilidad total." data-en="<strong>Clean Code Culture:</strong> Policy design to strictly decouple the UI layer from business logic, ensuring complete testability."><strong>Cultura de Código Limpio:</strong> Diseño de políticas para desacoplar estrictamente la capa UI de la lógica de negocio, garantizando testeabilidad total.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

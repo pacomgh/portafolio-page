@@ -33,6 +33,46 @@ a {
     color: inherit;
 }
 
+
+/* =========================================
+   BOTÓN DE IDIOMA
+   ========================================= */
+   .lang-switch-container {
+    position: absolute;
+    top: 2rem;
+    right: 10%;
+    z-index: 100;
+    }
+
+    .lang-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border-color);
+        color: var(--text-main);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .lang-btn:hover {
+        border-color: var(--primary-blue);
+        background: rgba(88, 166, 255, 0.1);
+    }
+
+    @media (max-width: 968px) {
+        .lang-switch-container {
+            position: relative;
+            top: 0;
+            right: 0;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
 /* =========================================
    NUEVA SECCIÓN HERO (Presentación)
    ========================================= */
@@ -123,6 +163,45 @@ a {
     }
     .hero-info h1 { font-size: 2.5rem; }
     .hobbies-container { justify-content: center; }
+}
+
+/* =========================================
+   RESPONSIVIDAD PARA MÓVILES (Tablets y Celulares)
+   ========================================= */
+   @media (max-width: 968px) {
+    /* Apilamos la sección principal (Videos arriba, Texto abajo) */
+    .flow-container { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    /* Apilamos los teléfonos uno debajo del otro */
+    .phones-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem; /* Damos un poco más de espacio entre los dos teléfonos */
+        width: 100%;
+    }
+
+    /* Le quitamos el efecto de "desfase" al segundo teléfono para que quede alineado */
+    .device:nth-child(2) { 
+        transform: translateY(0); 
+    }
+
+    /* Ajustamos el texto para que ocupe todo el ancho */
+    .flow-description { 
+        width: 100%; 
+        margin-top: 1rem; 
+    }
+    
+    /* Ajustes generales para que la página no se desborde en el S23 Ultra */
+    body {
+        padding: 2rem 5%;
+    }
+    
+    .project-header h1 {
+        font-size: 2.5rem;
+    }
 }
 
 /* =========================================

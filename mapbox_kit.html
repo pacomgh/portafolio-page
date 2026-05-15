@@ -6,10 +6,11 @@
     <title>Mapbox Kit Navigation | Detalle</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="js/lang.js" defer></script>
 </head>
 <body>
 
-    <a href="index.html" class="back-btn">← Volver al inicio</a>
+    <a href="index.html" class="back-btn i18n" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
 
     <div class="project-header">
         <h1>Mapbox Kit Navigation</h1>
@@ -20,33 +21,37 @@
             <span class="tech-badge-green">Pub.dev</span>
         </div>
         <div class="project-summary">
-            <p><strong>Desarrollo de Librería y Soluciones Modulares</strong><br>
-            Construcción de una librería personalizada en Flutter utilizando Mapbox para simular y gestionar flujos de navegación en tiempo real. La solución fue diseñada bajo principios de modularidad, permitiendo su adaptación rápida a múltiples proyectos y su publicación exitosa en el ecosistema de paquetes de Dart.</p>
+            <p class="i18n" 
+               data-es="<strong>Desarrollo de Librería y Soluciones Modulares</strong><br>Construcción de una librería personalizada en Flutter utilizando Mapbox para simular y gestionar flujos de navegación en tiempo real. La solución fue diseñada bajo principios de modularidad, permitiendo su adaptación rápida a múltiples proyectos y su publicación exitosa en el ecosistema de paquetes de Dart." 
+               data-en="<strong>Library Development and Modular Solutions</strong><br>Built a custom Flutter library using Mapbox to simulate and manage real-time navigation flows. The solution was designed under modularity principles, allowing rapid adaptation to multiple projects and successful publication in the Dart package ecosystem.">
+               <strong>Desarrollo de Librería y Soluciones Modulares</strong><br>
+               Construcción de una librería personalizada en Flutter utilizando Mapbox para simular y gestionar flujos de navegación en tiempo real. La solución fue diseñada bajo principios de modularidad, permitiendo su adaptación rápida a múltiples proyectos y su publicación exitosa en el ecosistema de paquetes de Dart.
+            </p>
         </div>
     </div>
 
     <div class="flow-section">
-        <h2 class="flow-title">Flujo: Navegación Dinámica y Guía de Voz</h2>
+        <h2 class="flow-title i18n" data-es="Flujo: Navegación Dinámica y Guía de Voz" data-en="Flow: Dynamic Navigation and Voice Guidance">Flujo: Navegación Dinámica y Guía de Voz</h2>
         
         <div class="flow-container">
             <div class="phones-wrapper">
                 <div class="device">
-                    <span class="device-label">Gestión de Waypoints</span>
+                    <span class="device-label i18n" data-es="Gestión de Waypoints" data-en="Waypoint Management">Gestión de Waypoints</span>
                     <video src="assets/mapboxkit_waypoint.mp4" controls playsinline poster="assets/poster_nav.jpg"></video>
                 </div>
                 <div class="device">
-                    <span class="device-label">Navegación Activa</span>
+                    <span class="device-label i18n" data-es="Navegación Activa" data-en="Active Navigation">Navegación Activa</span>
                     <video src="assets/mapboxkit_navigation.mp4" controls playsinline poster="assets/poster_waypoints.jpg"></video>
                 </div>
             </div>
 
             <div class="flow-description">
-                <h3>Arquitectura de la Librería</h3>
-                <p>El reto principal fue crear una lógica que permitiera alterar la ruta en pleno movimiento sin perder la integridad de la navegación guiada.</p>
+                <h3 class="i18n" data-es="Arquitectura de la Librería" data-en="Library Architecture">Arquitectura de la Librería</h3>
+                <p class="i18n" data-es="El reto principal fue crear una lógica que permitiera alterar la ruta en pleno movimiento sin perder la integridad de la navegación guiada." data-en="The main challenge was creating logic that allowed altering the route on the move without losing the integrity of the guided navigation.">El reto principal fue crear una lógica que permitiera alterar la ruta en pleno movimiento sin perder la integridad de la navegación guiada.</p>
                 <ul>
-                    <li><strong>Gestión Dinámica:</strong> Implementación de lógica para agregar, actualizar y remover paradas (waypoints) en tiempo real durante la ruta.</li>
-                    <li><strong>Guía de Voz:</strong> Integración de segmentos de navegación guiada por voz para mejorar la experiencia de usuario manos libres.</li>
-                    <li><strong>Publicación en Pub.dev:</strong> Manejo completo del ciclo de vida del paquete, desde la documentación técnica hasta el versionado y lanzamiento.</li>
+                    <li class="i18n" data-es="<strong>Gestión Dinámica:</strong> Implementación de lógica para agregar, actualizar y remover paradas (waypoints) en tiempo real durante la ruta." data-en="<strong>Dynamic Management:</strong> Implementation of logic to add, update, and remove stops (waypoints) in real-time during the route."><strong>Gestión Dinámica:</strong> Implementación de lógica para agregar, actualizar y remover paradas (waypoints) en tiempo real durante la ruta.</li>
+                    <li class="i18n" data-es="<strong>Guía de Voz:</strong> Integración de segmentos de navegación guiada por voz para mejorar la experiencia de usuario manos libres." data-en="<strong>Voice Guidance:</strong> Integration of voice-guided navigation segments to improve the hands-free user experience."><strong>Guía de Voz:</strong> Integración de segmentos de navegación guiada por voz para mejorar la experiencia de usuario manos libres.</li>
+                    <li class="i18n" data-es="<strong>Publicación en Pub.dev:</strong> Manejo completo del ciclo de vida del paquete, desde la documentación técnica hasta el versionado y lanzamiento." data-en="<strong>Publication on Pub.dev:</strong> Complete management of the package lifecycle, from technical documentation to versioning and release."><strong>Publicación en Pub.dev:</strong> Manejo completo del ciclo de vida del paquete, desde la documentación técnica hasta el versionado y lanzamiento.</li>
                 </ul>
             </div>
         </div>
